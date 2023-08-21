@@ -7,10 +7,11 @@
 #pragma comment(lib, "ws2_32.lib")
 #define socklen_t int
 #else
-#include sys/types.h>
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 #define SOCKET int
 #define INVALID_SOCKET -1
 #define closesocket close
